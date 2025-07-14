@@ -21,7 +21,7 @@
             <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Prodotti</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Contatti</a></li>
         </ul>
-        <p class="text-center text-white my-0">© 2025 Company, Inc</p>
+        <p class="text-center text-white my-0">© 2025 Aulab</p>
     </footer>
 </body>
 
