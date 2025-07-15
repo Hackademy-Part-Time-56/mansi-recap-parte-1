@@ -17,6 +17,7 @@
                  <th scope="col">Immagine</th>
                  <th scope="col">Titolo</th>
                  <th scope="col">Quantità</th>
+                 <th scope="col">Autore</th>
                  <th scope="col"></th>
              </tr>
          </thead>
@@ -29,6 +30,7 @@
                      </td>
                      <td>{{ $product->title }}</td>
                      <td>{{ $product->quantity }}</td>
+                     <td>{{ $product->user->name ?? 'Senza Autore' }}</td>
                      <td>
 
                          <div class="d-grid gap-2 d-md-flex justify-content-md-end">

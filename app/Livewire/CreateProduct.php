@@ -35,6 +35,7 @@ class CreateProduct extends Component
             'title' => $this->title,
             'description' => $this->description,
             'quantity' => $this->quantity,
+            'user_id' => auth()->user()->id,
         ]);
 
         $this->reset();
