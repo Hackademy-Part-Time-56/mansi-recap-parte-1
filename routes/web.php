@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(ContactController::class)->group(function () {
     Route::get('/contatti', 'form')->name('contact.form');
-    //ciao
+    //ciao ciao
     Route::post('/invia-messaggio', 'send')->name('contact.send');
 });
 
