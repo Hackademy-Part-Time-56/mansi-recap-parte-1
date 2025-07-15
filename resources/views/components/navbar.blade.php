@@ -16,7 +16,27 @@
                   <li class="nav-item">
                       <a class="nav-link" href="{{ route('contact.form') }}">Contatti</a>
                   </li>
+                  @guest
+                      <li class="nav-item">
+                          <a class="nav-link" href="{{ route('login') }}">Login</a>
+                      </li>
+
+                      <li class="nav-item">
+                          <a class="nav-link" href="{{ route('register') }}">Registrati</a>
+                      </li>
+
+                  @endguest
               </ul>
           </div>
       </div>
+      @auth
+          <div class="px-5">
+              <span> Ciao, {{ Auth::user()->name }}</span>
+              <form action="{{ route('logout') }}" method="POST">
+                  @csrf
+                  <button class="btn btn-danger" type="submit">Logout</button>
+              </form>
+
+          </div>
+      @endauth
   </nav>
