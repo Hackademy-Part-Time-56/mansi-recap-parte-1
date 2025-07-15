@@ -7,6 +7,11 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
+                  @auth
+                      <li class="nav-item">
+                          <a class="nav-link" href="{{ route('admin.dashboard') }}">Dashboard</a>
+                      </li>
+                  @endauth
                   <li class="nav-item">
                       <a class="nav-link active" href="{{ route('pages.homepage') }}">Homepage</a>
                   </li>
@@ -16,6 +21,7 @@
                   <li class="nav-item">
                       <a class="nav-link" href="{{ route('contact.form') }}">Contatti</a>
                   </li>
+
                   @guest
                       <li class="nav-item">
                           <a class="nav-link" href="{{ route('login') }}">Login</a>
