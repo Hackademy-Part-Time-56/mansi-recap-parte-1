@@ -18,6 +18,7 @@
                  <th scope="col">Titolo</th>
                  <th scope="col">Quantità</th>
                  <th scope="col">Autore</th>
+                 <th scope="col">Categorie</th>
                  <th scope="col"></th>
              </tr>
          </thead>
@@ -31,6 +32,13 @@
                      <td>{{ $product->title }}</td>
                      <td>{{ $product->quantity }}</td>
                      <td>{{ $product->user->name ?? 'Senza Autore' }}</td>
+                     <td>
+                         @foreach ($product->categories as $category)
+                             {{ $category->name }} @if (!$loop->last)
+                                 ,
+                             @endif
+                         @endforeach
+                     </td>
                      <td>
 
                          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
