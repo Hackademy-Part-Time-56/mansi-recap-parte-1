@@ -42,9 +42,9 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Product $product)
     {
-        return view('admin.products.edit');
+        return view('admin.products.edit', compact('product'));
     }
 
     /**
